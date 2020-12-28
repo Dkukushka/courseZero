@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center center;
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+
+/*----------------------------------------HEADER-------------------------------------------**/
+.header {
+  margin: auto;
+  max-height: 120px;
+  height: 100vh;
+  background-color: #cc8514;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+}
+.logo {
+  text-decoration: none;
+  font-size: 45px;
+  color: #fff;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.item-link {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-link {
+  color: #cc8514;
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -2px 5p;
+  user-select: none;
+  font-weight: 600;
+}
+/*----------------------------------------MAIN-CONTENT-------------------------------------------**/
+.main-content {
+  padding-top: 3%;
+}
+.poster {
+  max-width: 1050px;
+  width: 100%;
+  max-height: 450px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.slideshow-container {
+  max-width: 1050px;
+  position: relative;
+  margin: auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #cc8514;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.text {
+  color: #fff;
+  font-size: 50px;
+  padding: 5%;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.text2 {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/**----------------------------------Course-section-----------------------------------------*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1200px;
+  width: 90%;
+  padding: 20px;
+  grid-gap: 40px;
+  margin: auto;
+}
+.card {
+  background-color: #1c1b29;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+.card-container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card-container:hover {
+  border-radius: 20px;
+  transition: all 0.5s;
+  border: 1px solid #1c1b29;
+}
+img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+.card-container:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+.card1 > .card-container:after {
+  background-image: linear-gradient(135deg, #0100ec, #fb36f4);
+}
+.card2 > .card-container:after {
+  background-image: linear-gradient(135deg, #ca6d15, #ece906);
+}
+.card3 > .card-container:after {
+  background-image: linear-gradient(135deg, #1d87ff, #4c6292);
+}
+.details {
+  padding: 20px 10px;
+}
+.details > h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.details > p {
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.card-btn {
+  color: #cc8514;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px auto;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2), 0 -1px rgba(0, 0, 0, 0.8);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -2px 5px,
+    inset rgba(252, 255, 255, 0.7) 0 2px 5px, rgba(0, 0, 0, 0.8) 0 2px 5px -1px;
+  user-select: none;
+}
+.card-btn:hover {
+  background-color: #cc8514;
+  color: #fff;
+}
+.course-link {
+  color: #cc8514;
+  margin-top: 2%;
+  display: block;
+}
+h4 {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+/**-------------------------------------------------Footer-----------------------------------------------------*/
+.footer {
+  width: 100%;
+  margin: auto;
+  max-height: 210px;
+  height: 100vh;
+  background-color: #1c1b29;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 6%;
+  padding: 0 10%;
+}
+.footer-nav {
+  max-width: 1230px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.footer-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contacts-nav {
+  list-style: none;
+  display: flex;
+}
+.secondary-nav {
+  list-style: none;
+}
+.contacts {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+}
+.second-item:hover {
+  border: 1px dotted #1c1b29;
+}

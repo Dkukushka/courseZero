@@ -17,18 +17,8 @@ body,input{
     background-color: #fff;
     overflow: hidden;
 }
-.title{
-    text-align: center;
-}
-.title-link{
-    text-decoration: none;
+h1{
     color: #cc8514;
-    font-weight: bold;
-}
-.title-link:hover{
-    border:2px solid #cc8514;
-    border-radius: 10%;
-    transition: 0.5s;
 }
 .container:before{
     content: '';
@@ -97,6 +87,7 @@ form.sign-up-form{
     display: grid;
     grid-template-columns: 15% 85%;
     padding: 0 .4rem;
+    position: relative;
 }
 .input-field i{
     text-align: center;
@@ -117,6 +108,26 @@ form.sign-up-form{
     color: #aaa;
     font-weight: 500;
 }
+
+.input-field i.fa-check{
+    font-size: 19px;
+    position: absolute;
+    top: 2px;
+    right: 19px;
+    color:green;
+    z-index: 3;  
+}
+
+.input-field i.fa-exclamation-circle{
+    font-size: 19px;
+    color:#ff0000e3;
+    position: absolute;
+    top: 2px;
+    right: 19px;
+    color:red;
+    z-index: 3;  
+}
+
 .btn{
     width: 190px;
     height: 49px;
